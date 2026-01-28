@@ -1,0 +1,11 @@
+// GET requests for all patients
+GET https://localhost:4000/patients
+
+//POST request create a patient
+POST https://localhost:4000/patients
+
+//PUT request to update a patient
+PUT https://localhost:4000/patients/{id}
+
+//DELETE request
+DELETE https://localhost:4000/patients/{id}

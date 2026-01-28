@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: patient-service-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_DB: db
+    ports:
+      - "5001:5432"
+    volumes:
+      - /Users/varun/documents/db_volumes/patient-service-db:/var/lib/postgresql
+    networks:
+      - internalpatient
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8082:80"
+    volumes:
+      - /Users/varun/documents/db_volumes/pgadmin:/var/lib/pgadmin
+    networks:
+      - internalpatient
+
+networks:
+  internalpatient:
+    external: true
+
