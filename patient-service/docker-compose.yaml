@@ -26,6 +26,8 @@ services:
     networks:
       - internalpatient
 
+
+
 networks:
   internalpatient:
     external: true
