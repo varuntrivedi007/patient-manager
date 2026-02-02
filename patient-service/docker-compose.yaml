@@ -26,9 +26,28 @@ services:
     networks:
       - internalpatient
 
+  patient-service:
+    container_name: patient-service
+    image: patient-service:latest
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "4000:4000"
 
+
+    networks:
+      - internalpatient
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://patient-service-db:5432/db
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: qwerty
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      BILLING_SERVICE_ADDRESS: billing-service
+      BILLING_SERVICE_GRPC_PORT: "9001"
 
 networks:
   internalpatient:
     external: true
-

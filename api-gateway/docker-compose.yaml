@@ -1,0 +1,16 @@
+services:
+  api-gateway:
+    container_name: api-gateway
+    image: api-gateway:latest
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "4004:4004"
+
+    networks:
+      - internalpatient
+
+networks:
+  internalpatient:
+    external: true

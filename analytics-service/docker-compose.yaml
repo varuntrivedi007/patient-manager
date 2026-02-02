@@ -1,0 +1,17 @@
+services:
+  analytics-service:
+    container_name: analytics-service
+    image: analytics-service:latest
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+        - "4002:4002"
+    networks:
+        - internalpatient
+
+networks:
+  internalpatient:
+    external: true
+
+
