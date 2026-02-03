@@ -25,3 +25,7 @@ spring:
             - Path=/api-docs/patients
           filters:
             - RewritePath=/api-docs/patients,/v3/api-docs
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
