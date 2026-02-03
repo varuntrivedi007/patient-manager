@@ -3,8 +3,8 @@ services:
     image: postgres:latest
     container_name: auth-service-db
     environment:
-      POSTGRES_USER: good
-      POSTGRES_PASSWORD: boy
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: qwerty
       POSTGRES_DB: db
     ports:
       - "5002:5432"
@@ -13,6 +13,25 @@ services:
     networks:
       - internalpatient
 
+
+  auth-service:
+    container_name: auth-service
+    image: auth-service:latest
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "4005:4005"
+    environment:
+      SPRING_DATASOURCE_PASSWORD: qwerty
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://auth-service-db:5432/db"
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_SQL_INIT_MODE: always
+    networks:
+      - internalpatient
+
 networks:
   internalpatient:
-    external: true
+   external: true
+
