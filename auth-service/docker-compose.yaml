@@ -28,6 +28,7 @@ services:
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_SQL_INIT_MODE: always
+      JWT_SECRET: cmVwbGFjZWxlc3NvbmNyb3dkZXhhY3RseW9wcG9zaXRleW91YmlnZ2VzdHBsdXNwcm8=
     networks:
       - internalpatient
 
