@@ -1,0 +1,647 @@
+{
+ "Resources": {
+  "PatientManagementVpcF1F9209A": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "PatientManagementVpc"
+     }
+    ]
+   }
+  },
+  "PatientManagementVpcPublicSubnet1Subnet32B9FD34": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": {
+     "Fn::Select": [
+      0,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.0.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet1RouteTableA6B004E5": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet1RouteTableAssociationB803908F": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPublicSubnet1RouteTableA6B004E5"
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPublicSubnet1Subnet32B9FD34"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet1DefaultRouteCC8B87E7": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "PatientManagementVpcIGW6E5E564D"
+    },
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPublicSubnet1RouteTableA6B004E5"
+    }
+   },
+   "DependsOn": [
+    "PatientManagementVpcVPCGW05B0D621"
+   ]
+  },
+  "PatientManagementVpcPublicSubnet1EIP57CBC205": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet1"
+     }
+    ]
+   }
+  },
+  "PatientManagementVpcPublicSubnet1NATGatewayB6BB180F": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "PatientManagementVpcPublicSubnet1EIP57CBC205",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPublicSubnet1Subnet32B9FD34"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet1"
+     }
+    ]
+   },
+   "DependsOn": [
+    "PatientManagementVpcPublicSubnet1DefaultRouteCC8B87E7",
+    "PatientManagementVpcPublicSubnet1RouteTableAssociationB803908F"
+   ]
+  },
+  "PatientManagementVpcPublicSubnet2Subnet301A18D3": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": {
+     "Fn::Select": [
+      1,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.64.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet2RouteTable8FB51550": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet2RouteTableAssociationC6F51BA2": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPublicSubnet2RouteTable8FB51550"
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPublicSubnet2Subnet301A18D3"
+    }
+   }
+  },
+  "PatientManagementVpcPublicSubnet2DefaultRoute0DC44EBB": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "PatientManagementVpcIGW6E5E564D"
+    },
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPublicSubnet2RouteTable8FB51550"
+    }
+   },
+   "DependsOn": [
+    "PatientManagementVpcVPCGW05B0D621"
+   ]
+  },
+  "PatientManagementVpcPublicSubnet2EIP7F7E2B9F": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet2"
+     }
+    ]
+   }
+  },
+  "PatientManagementVpcPublicSubnet2NATGatewayEFB106BB": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "PatientManagementVpcPublicSubnet2EIP7F7E2B9F",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPublicSubnet2Subnet301A18D3"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PublicSubnet2"
+     }
+    ]
+   },
+   "DependsOn": [
+    "PatientManagementVpcPublicSubnet2DefaultRoute0DC44EBB",
+    "PatientManagementVpcPublicSubnet2RouteTableAssociationC6F51BA2"
+   ]
+  },
+  "PatientManagementVpcPrivateSubnet1SubnetBDF7E702": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": {
+     "Fn::Select": [
+      0,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.128.0/18",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PrivateSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet1RouteTableEE52EACD": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PrivateSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet1RouteTableAssociation4B6E1CD5": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPrivateSubnet1RouteTableEE52EACD"
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPrivateSubnet1SubnetBDF7E702"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet1DefaultRouteFABE5400": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "PatientManagementVpcPublicSubnet1NATGatewayB6BB180F"
+    },
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPrivateSubnet1RouteTableEE52EACD"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": {
+     "Fn::Select": [
+      1,
+      {
+       "Fn::GetAZs": ""
+      }
+     ]
+    },
+    "CidrBlock": "10.0.192.0/18",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PrivateSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet2RouteTable24A9ED13": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "localStack/PatientManagementVpc/PrivateSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet2RouteTableAssociation1AA2E279": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPrivateSubnet2RouteTable24A9ED13"
+    },
+    "SubnetId": {
+     "Ref": "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9"
+    }
+   }
+  },
+  "PatientManagementVpcPrivateSubnet2DefaultRouteB1A67D2B": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "PatientManagementVpcPublicSubnet2NATGatewayEFB106BB"
+    },
+    "RouteTableId": {
+     "Ref": "PatientManagementVpcPrivateSubnet2RouteTable24A9ED13"
+    }
+   }
+  },
+  "PatientManagementVpcIGW6E5E564D": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "PatientManagementVpc"
+     }
+    ]
+   }
+  },
+  "PatientManagementVpcVPCGW05B0D621": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "PatientManagementVpcIGW6E5E564D"
+    },
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "AuthServiceDbSubnetGroup12237DD0": {
+   "Type": "AWS::RDS::DBSubnetGroup",
+   "Properties": {
+    "DBSubnetGroupDescription": "Subnet group for AuthServiceDb database",
+    "SubnetIds": [
+     {
+      "Ref": "PatientManagementVpcPrivateSubnet1SubnetBDF7E702"
+     },
+     {
+      "Ref": "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9"
+     }
+    ]
+   }
+  },
+  "AuthServiceDbSecurityGroup4A0F0427": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security group for AuthServiceDb database",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "localStackAuthServiceDbSecretFE2A1C253fdaad7efa858a3daf9490cf0a702aeb": {
+   "Type": "AWS::SecretsManager::Secret",
+   "Properties": {
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Generated by the CDK for stack: ",
+       {
+        "Ref": "AWS::StackName"
+       }
+      ]
+     ]
+    },
+    "GenerateSecretString": {
+     "ExcludeCharacters": " %+~`#$&*()|[]{}:;<>?!'/@\"\\",
+     "GenerateStringKey": "password",
+     "PasswordLength": 30,
+     "SecretStringTemplate": "{\"username\":\"admin\"}"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "AuthServiceDbSecretAttachment4C4A1911": {
+   "Type": "AWS::SecretsManager::SecretTargetAttachment",
+   "Properties": {
+    "SecretId": {
+     "Ref": "localStackAuthServiceDbSecretFE2A1C253fdaad7efa858a3daf9490cf0a702aeb"
+    },
+    "TargetId": {
+     "Ref": "AuthServiceDb4EA10E77"
+    },
+    "TargetType": "AWS::RDS::DBInstance"
+   }
+  },
+  "AuthServiceDb4EA10E77": {
+   "Type": "AWS::RDS::DBInstance",
+   "Properties": {
+    "AllocatedStorage": "20",
+    "CopyTagsToSnapshot": true,
+    "DBInstanceClass": "db.t2.micro",
+    "DBName": "auth-service-db",
+    "DBSubnetGroupName": {
+     "Ref": "AuthServiceDbSubnetGroup12237DD0"
+    },
+    "Engine": "postgres",
+    "EngineVersion": "17.2",
+    "MasterUserPassword": {
+     "Fn::Join": [
+      "",
+      [
+       "{{resolve:secretsmanager:",
+       {
+        "Ref": "localStackAuthServiceDbSecretFE2A1C253fdaad7efa858a3daf9490cf0a702aeb"
+       },
+       ":SecretString:password::}}"
+      ]
+     ]
+    },
+    "MasterUsername": "admin",
+    "StorageType": "gp2",
+    "VPCSecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "AuthServiceDbSecurityGroup4A0F0427",
+       "GroupId"
+      ]
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "PatientServiceDbSubnetGroup1312FFB6": {
+   "Type": "AWS::RDS::DBSubnetGroup",
+   "Properties": {
+    "DBSubnetGroupDescription": "Subnet group for PatientServiceDb database",
+    "SubnetIds": [
+     {
+      "Ref": "PatientManagementVpcPrivateSubnet1SubnetBDF7E702"
+     },
+     {
+      "Ref": "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9"
+     }
+    ]
+   }
+  },
+  "PatientServiceDbSecurityGroupCEB42CD9": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security group for PatientServiceDb database",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "PatientManagementVpcF1F9209A"
+    }
+   }
+  },
+  "localStackPatientServiceDbSecret11A0ECDF3fdaad7efa858a3daf9490cf0a702aeb": {
+   "Type": "AWS::SecretsManager::Secret",
+   "Properties": {
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Generated by the CDK for stack: ",
+       {
+        "Ref": "AWS::StackName"
+       }
+      ]
+     ]
+    },
+    "GenerateSecretString": {
+     "ExcludeCharacters": " %+~`#$&*()|[]{}:;<>?!'/@\"\\",
+     "GenerateStringKey": "password",
+     "PasswordLength": 30,
+     "SecretStringTemplate": "{\"username\":\"admin\"}"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "PatientServiceDbSecretAttachment54460532": {
+   "Type": "AWS::SecretsManager::SecretTargetAttachment",
+   "Properties": {
+    "SecretId": {
+     "Ref": "localStackPatientServiceDbSecret11A0ECDF3fdaad7efa858a3daf9490cf0a702aeb"
+    },
+    "TargetId": {
+     "Ref": "PatientServiceDb4C436D31"
+    },
+    "TargetType": "AWS::RDS::DBInstance"
+   }
+  },
+  "PatientServiceDb4C436D31": {
+   "Type": "AWS::RDS::DBInstance",
+   "Properties": {
+    "AllocatedStorage": "20",
+    "CopyTagsToSnapshot": true,
+    "DBInstanceClass": "db.t2.micro",
+    "DBName": "patient-service-db",
+    "DBSubnetGroupName": {
+     "Ref": "PatientServiceDbSubnetGroup1312FFB6"
+    },
+    "Engine": "postgres",
+    "EngineVersion": "17.2",
+    "MasterUserPassword": {
+     "Fn::Join": [
+      "",
+      [
+       "{{resolve:secretsmanager:",
+       {
+        "Ref": "localStackPatientServiceDbSecret11A0ECDF3fdaad7efa858a3daf9490cf0a702aeb"
+       },
+       ":SecretString:password::}}"
+      ]
+     ]
+    },
+    "MasterUsername": "admin",
+    "StorageType": "gp2",
+    "VPCSecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "PatientServiceDbSecurityGroupCEB42CD9",
+       "GroupId"
+      ]
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete"
+  },
+  "AuthServiceDBHealthCheck": {
+   "Type": "AWS::Route53::HealthCheck",
+   "Properties": {
+    "HealthCheckConfig": {
+     "FailureThreshold": 3,
+     "IPAddress": {
+      "Fn::GetAtt": [
+       "AuthServiceDb4EA10E77",
+       "Endpoint.Address"
+      ]
+     },
+     "Port": {
+      "Fn::GetAtt": [
+       "AuthServiceDb4EA10E77",
+       "Endpoint.Port"
+      ]
+     },
+     "RequestInterval": 30,
+     "Type": "TCP"
+    }
+   }
+  },
+  "PatientServiceDBHealthCheck": {
+   "Type": "AWS::Route53::HealthCheck",
+   "Properties": {
+    "HealthCheckConfig": {
+     "FailureThreshold": 3,
+     "IPAddress": {
+      "Fn::GetAtt": [
+       "PatientServiceDb4C436D31",
+       "Endpoint.Address"
+      ]
+     },
+     "Port": {
+      "Fn::GetAtt": [
+       "PatientServiceDb4C436D31",
+       "Endpoint.Port"
+      ]
+     },
+     "RequestInterval": 30,
+     "Type": "TCP"
+    }
+   }
+  }
+ }
+}
