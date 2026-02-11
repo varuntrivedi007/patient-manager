@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class GatewayConfig {
+public class ProdGatewayConfig {
 
     @Bean
     public RouteLocator customRouteLocator(
@@ -25,7 +25,7 @@ public class GatewayConfig {
                     System.out.println("★★★ Adding route: auth-service-route");
                     return r.path("/auth/**")
                             .filters(f -> f.stripPrefix(1))
-                            .uri("http://auth-service:4005");
+                            .uri("http://host.docker.internal:4005");
                 })
 
                 // /api/patients/** -> patient-service (StripPrefix=1 + JwtValidation)
@@ -37,7 +37,7 @@ public class GatewayConfig {
                                     // matches YAML: - JwtValidation
                                     .filter(jwtValidation.apply(new Object()))
                             )
-                            .uri("http://patient-service:4000");
+                            .uri("http://host.docker.internal:4000");
                 })
 
                 // /api-docs/patients -> patient-service /v3/api-docs
@@ -45,7 +45,7 @@ public class GatewayConfig {
                     System.out.println("★★★ Adding route: api-docs-patient-route");
                     return r.path("/api-docs/patients")
                             .filters(f -> f.rewritePath("/api-docs/patients", "/v3/api-docs"))
-                            .uri("http://patient-service:4000");
+                            .uri("http://host.docker.internal:4000");
                 })
 
                 // /api-docs/auth -> auth-service /v3/api-docs
@@ -53,7 +53,7 @@ public class GatewayConfig {
                     System.out.println("★★★ Adding route: api-docs-auth-route");
                     return r.path("/api-docs/auth")
                             .filters(f -> f.rewritePath("/api-docs/auth", "/v3/api-docs"))
-                            .uri("http://auth-service:4005");
+                            .uri("http://host.docker.internal:4005");
                 })
 
                 .build();

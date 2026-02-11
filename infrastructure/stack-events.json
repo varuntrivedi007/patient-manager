@@ -1,0 +1,596 @@
+{
+    "StackEvents": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "4697f437-e7f9-4e2e-9f67-b38ee7932f3f",
+            "StackName": "patient-management",
+            "LogicalResourceId": "patient-management",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2026-02-10T23:38:45.095900+00:00",
+            "ResourceStatus": "ROLLBACK_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "e4e33f79-c7dd-49bb-a39c-89a12c502fbe",
+            "StackName": "patient-management",
+            "LogicalResourceId": "patient-management",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2026-02-10T23:38:45.095890+00:00",
+            "ResourceStatus": "CREATE_FAILED"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "ef1eb92f-2efd-49ff-af3a-09443d007a6d",
+            "StackName": "patient-management",
+            "LogicalResourceId": "AnalyticsServiceCD38C492",
+            "ResourceType": "AWS::ECS::Service",
+            "Timestamp": "2026-02-10T23:38:45.095886+00:00",
+            "ResourceStatus": "CREATE_FAILED"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "d2b9ce47-fcbc-486b-8132-e2c972c3b0eb",
+            "StackName": "patient-management",
+            "LogicalResourceId": "patient-management",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2026-02-10T23:38:45.095864+00:00",
+            "ResourceStatus": "CREATE_FAILED"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "e7953a30-81e8-465c-8e06-e87a3eababf0",
+            "StackName": "patient-management",
+            "LogicalResourceId": "MskCluster",
+            "ResourceType": "AWS::MSK::Cluster",
+            "Timestamp": "2026-02-10T23:38:45.095855+00:00",
+            "ResourceStatus": "CREATE_FAILED",
+            "ResourceStatusReason": "Resource provider operation failed: An error occurred (BadRequestException) when calling the CreateCluster operation: Unsupported KafkaVersion [2.8.0]. Valid values: [3.7.x, 3.8.x, 3.8.x.kraft, 3.5.1, 3.6.0, 3.9.x.kraft, 3.9.x, 3.7.x.kraft, 3.4.0, 4.0.x.kraft]"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "41f8bb66-a315-4534-893a-0e2c0c34acfa",
+            "StackName": "patient-management",
+            "LogicalResourceId": "MskCluster",
+            "ResourceType": "AWS::MSK::Cluster",
+            "Timestamp": "2026-02-10T23:38:45.033321+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "d043c5e6-70e2-47eb-b0dc-cef0d8397af5",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionExecutionRoleDefaultPolicy582C1C35",
+            "PhysicalResourceId": "stack-APIG-74PQR2X3OK9DO",
+            "ResourceType": "AWS::IAM::Policy",
+            "Timestamp": "2026-02-10T23:38:45.033209+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "bbd9cd73-7bee-4783-94a2-eea3cc622a6d",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionExecutionRoleDefaultPolicy582C1C35",
+            "ResourceType": "AWS::IAM::Policy",
+            "Timestamp": "2026-02-10T23:38:45.029696+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "c7729a89-a6dc-4d97-b062-067b33f83f8c",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceSecurityGroupfromlocalStackAPIGatewayServiceLBSecurityGroup7BC239D34004F59F2562",
+            "PhysicalResourceId": "sgr-631fc27b4f0179054",
+            "ResourceType": "AWS::EC2::SecurityGroupIngress",
+            "Timestamp": "2026-02-10T23:38:45.029587+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "870a3aca-e2a4-4bdb-bc41-a1477ba42a8f",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceSecurityGroupfromlocalStackAPIGatewayServiceLBSecurityGroup7BC239D34004F59F2562",
+            "ResourceType": "AWS::EC2::SecurityGroupIngress",
+            "Timestamp": "2026-02-10T23:38:45.023114+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "e5505eb4-ca35-4491-9664-28d689a64249",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBSecurityGrouptolocalStackAPIGatewayServiceSecurityGroup317791224004698C67B2",
+            "PhysicalResourceId": "sgr-2220467449cc82dcc",
+            "ResourceType": "AWS::EC2::SecurityGroupEgress",
+            "Timestamp": "2026-02-10T23:38:45.023005+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "ecaa1075-c9f4-409d-86d1-2a85281a8521",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBSecurityGrouptolocalStackAPIGatewayServiceSecurityGroup317791224004698C67B2",
+            "ResourceType": "AWS::EC2::SecurityGroupEgress",
+            "Timestamp": "2026-02-10T23:38:45.015684+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "66a5ead5-1536-4a85-baac-1ffe98219b3f",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceA5206149",
+            "PhysicalResourceId": "arn:aws:ecs:us-east-1:000000000000:service/PatientManagementCluster98E10F8D-1c44f57a/api-gateway",
+            "ResourceType": "AWS::ECS::Service",
+            "Timestamp": "2026-02-10T23:38:45.015562+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "c20b7354-126c-48a9-bc9d-c5143ebbbc11",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceA5206149",
+            "ResourceType": "AWS::ECS::Service",
+            "Timestamp": "2026-02-10T23:38:44.253595+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "c5fee1f0-941e-4b9b-8db3-54797fa69cc8",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinition199BB1B7",
+            "PhysicalResourceId": "arn:aws:ecs:us-east-1:000000000000:task-definition/localStackAPIGatewayTaskDefinitionBC5D80A4:1",
+            "ResourceType": "AWS::ECS::TaskDefinition",
+            "Timestamp": "2026-02-10T23:38:44.253577+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "9a3aa9cb-b706-445d-ad5d-69cda5a48a72",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinition199BB1B7",
+            "ResourceType": "AWS::ECS::TaskDefinition",
+            "Timestamp": "2026-02-10T23:38:44.251375+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "1dfbf196-3445-428a-a504-b660658f90f7",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionExecutionRole555CBA21",
+            "PhysicalResourceId": "patient-management-APIGatewayTaskDefinition-49ad8de2",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2026-02-10T23:38:44.251304+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "15d52d2a-bb32-4ede-b6c6-d74e78c62365",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionExecutionRole555CBA21",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2026-02-10T23:38:44.249507+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "280b951e-8913-441d-a66d-61fcb2623350",
+            "StackName": "patient-management",
+            "LogicalResourceId": "ApiGatewayLogGroupA9770429",
+            "PhysicalResourceId": "/ecs/api-gateway",
+            "ResourceType": "AWS::Logs::LogGroup",
+            "Timestamp": "2026-02-10T23:38:44.249399+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "08d5ac0c-f752-4549-8e7d-d7293a8f3d61",
+            "StackName": "patient-management",
+            "LogicalResourceId": "ApiGatewayLogGroupA9770429",
+            "ResourceType": "AWS::Logs::LogGroup",
+            "Timestamp": "2026-02-10T23:38:44.142431+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "8ddd1630-4a27-4db4-95dc-dc011eb0e513",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9",
+            "PhysicalResourceId": "subnet-68ff9dfc6f024cbf3",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:44.142325+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "5d030f77-97e2-4117-bb69-e3dd7e64ca7c",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPrivateSubnet2Subnet58F4C9B9",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:44.137804+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "1c27c0d1-2ccd-4772-94b8-ee676eb43e85",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPrivateSubnet1SubnetBDF7E702",
+            "PhysicalResourceId": "subnet-b1d0d4033657fe483",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:44.134806+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "a6061ba9-5e81-40a0-a558-6d1a8d2b40c1",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPrivateSubnet1SubnetBDF7E702",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:44.129561+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "de562a0d-7ef5-47ae-b670-41c8b9f878fa",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceSecurityGroup98F3B93B",
+            "PhysicalResourceId": "sg-3aec0751ff31567d0",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2026-02-10T23:38:44.126938+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "7c0e6aa3-0a73-4b62-b73d-602bd5f31966",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceSecurityGroup98F3B93B",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2026-02-10T23:38:44.124390+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "ad3465df-2ccc-4000-b0a6-755207909d71",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementCluster98E10F8D",
+            "PhysicalResourceId": "PatientManagementCluster98E10F8D-1c44f57a",
+            "ResourceType": "AWS::ECS::Cluster",
+            "Timestamp": "2026-02-10T23:38:44.124225+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "09eebd07-3491-44e9-b97c-64c1182de8ca",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementCluster98E10F8D",
+            "ResourceType": "AWS::ECS::Cluster",
+            "Timestamp": "2026-02-10T23:38:43.997926+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "02900979-2b3c-416f-8979-e3f51d28cbf6",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionTaskRole894A199F",
+            "PhysicalResourceId": "patient-management-APIGatewayTaskDefinition-124b92c1",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2026-02-10T23:38:43.997872+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "1389e79b-725f-4b47-82b6-242e07c36836",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayTaskDefinitionTaskRole894A199F",
+            "ResourceType": "AWS::IAM::Role",
+            "Timestamp": "2026-02-10T23:38:43.952307+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "7e4e9617-a4cb-453c-9cf3-8927bff75236",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBPublicListenerD6FA7F47",
+            "PhysicalResourceId": "arn:aws:elasticloadbalancing:us-east-1:000000000000:listener/app/lb-3d14a35e/2085665070cc6c3a/a0e81db6de2841f2",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::Listener",
+            "Timestamp": "2026-02-10T23:38:43.952262+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "6914a774-bc62-4154-b3d6-f61f4d69e608",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBPublicListenerD6FA7F47",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::Listener",
+            "Timestamp": "2026-02-10T23:38:43.948751+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "b73dda67-22e0-4329-a888-a55c9c4dce47",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBDA2B7609",
+            "PhysicalResourceId": "arn:aws:elasticloadbalancing:us-east-1:000000000000:loadbalancer/app/lb-3d14a35e/2085665070cc6c3a",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Timestamp": "2026-02-10T23:38:43.948711+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "528c2197-92ed-4c39-a39b-40323d6ba6f9",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBDA2B7609",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "Timestamp": "2026-02-10T23:38:43.924240+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "1661056e-4671-48b4-9f47-862a8d8064ff",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBSecurityGroup8524BFD1",
+            "PhysicalResourceId": "sg-0d71d6c72fec47f0d",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2026-02-10T23:38:43.924176+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "b5cc0dba-bc03-4985-95c9-913fe24de6b0",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBSecurityGroup8524BFD1",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "Timestamp": "2026-02-10T23:38:43.921151+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "770b2cf5-b26f-45a4-ad34-efb28776209f",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2DefaultRoute0DC44EBB",
+            "PhysicalResourceId": "rtb-8ec8ce017f4068061~0.0.0.0/0",
+            "ResourceType": "AWS::EC2::Route",
+            "Timestamp": "2026-02-10T23:38:43.921050+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "7434afa2-7c78-4b7e-8e0a-8a722f6c74c6",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2DefaultRoute0DC44EBB",
+            "ResourceType": "AWS::EC2::Route",
+            "Timestamp": "2026-02-10T23:38:43.919576+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "07bac9af-4cc6-469b-b482-9c1cbe175b8a",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1DefaultRouteCC8B87E7",
+            "PhysicalResourceId": "rtb-57a2384ddf1bb5cd6~0.0.0.0/0",
+            "ResourceType": "AWS::EC2::Route",
+            "Timestamp": "2026-02-10T23:38:43.919520+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "4c81e97b-3c72-43d7-9963-9afa242ce0e0",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1DefaultRouteCC8B87E7",
+            "ResourceType": "AWS::EC2::Route",
+            "Timestamp": "2026-02-10T23:38:43.917027+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "f21a0045-c21f-44ab-9340-a9ba2d4829b3",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcVPCGW05B0D621",
+            "PhysicalResourceId": "IGW|vpc-b48fc6f2245b5cd29",
+            "ResourceType": "AWS::EC2::VPCGatewayAttachment",
+            "Timestamp": "2026-02-10T23:38:43.916977+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "92cc0f4d-7c01-4e99-a284-35e66e011555",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcVPCGW05B0D621",
+            "ResourceType": "AWS::EC2::VPCGatewayAttachment",
+            "Timestamp": "2026-02-10T23:38:43.915314+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "6c31ca57-465d-49a5-ba9a-82618f498390",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcIGW6E5E564D",
+            "PhysicalResourceId": "igw-747ee12ba418aa176",
+            "ResourceType": "AWS::EC2::InternetGateway",
+            "Timestamp": "2026-02-10T23:38:43.915285+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "af41efca-6c53-49b8-8393-fb945360cebf",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcIGW6E5E564D",
+            "ResourceType": "AWS::EC2::InternetGateway",
+            "Timestamp": "2026-02-10T23:38:43.912694+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "927c4425-cf4f-4f7a-8437-6db5f0c5d63b",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2RouteTableAssociationC6F51BA2",
+            "PhysicalResourceId": "rtbassoc-816c7e895eca8d76b",
+            "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+            "Timestamp": "2026-02-10T23:38:43.912617+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "d5bc2f6c-12a7-4b19-beeb-05216badb6aa",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2RouteTableAssociationC6F51BA2",
+            "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+            "Timestamp": "2026-02-10T23:38:43.909759+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "5ef44cf1-20f7-48c8-b63a-19c1b1b1e801",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2Subnet301A18D3",
+            "PhysicalResourceId": "subnet-26731141294c5ceaf",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:43.909742+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "5544bbcf-b4f0-4212-8fee-da987ce3eeb9",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2Subnet301A18D3",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:43.906077+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "2b5c66c7-0f69-470c-99f3-afa26dd84fed",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2RouteTable8FB51550",
+            "PhysicalResourceId": "rtb-8ec8ce017f4068061",
+            "ResourceType": "AWS::EC2::RouteTable",
+            "Timestamp": "2026-02-10T23:38:43.904029+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "e82bb23d-b047-49fd-86c9-c7cb5608a377",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet2RouteTable8FB51550",
+            "ResourceType": "AWS::EC2::RouteTable",
+            "Timestamp": "2026-02-10T23:38:43.901905+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "808dc86a-25aa-40da-9a7f-edc4bf3e2be4",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1RouteTableAssociationB803908F",
+            "PhysicalResourceId": "rtbassoc-8430a59fc285a0c95",
+            "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+            "Timestamp": "2026-02-10T23:38:43.901831+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "88a91633-dfd1-42f1-8bdd-ad5289a06733",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1RouteTableAssociationB803908F",
+            "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+            "Timestamp": "2026-02-10T23:38:43.893372+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "0f1ace1a-358f-4485-8f3e-2138199a7bce",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1Subnet32B9FD34",
+            "PhysicalResourceId": "subnet-2afed7a9d3f1e4217",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:43.893349+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "56f4b938-88da-459f-b570-5594b7a151d2",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1Subnet32B9FD34",
+            "ResourceType": "AWS::EC2::Subnet",
+            "Timestamp": "2026-02-10T23:38:43.887078+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "7a7ffdb7-bf85-4b0a-81c0-5ce7e056cf61",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1RouteTableA6B004E5",
+            "PhysicalResourceId": "rtb-57a2384ddf1bb5cd6",
+            "ResourceType": "AWS::EC2::RouteTable",
+            "Timestamp": "2026-02-10T23:38:43.884736+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "1ec29846-25eb-4e06-8426-cf76a14d5b51",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcPublicSubnet1RouteTableA6B004E5",
+            "ResourceType": "AWS::EC2::RouteTable",
+            "Timestamp": "2026-02-10T23:38:43.878554+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "8e572ddc-0f85-4f1a-829a-f3b07ffa79db",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70",
+            "PhysicalResourceId": "arn:aws:elasticloadbalancing:us-east-1:000000000000:targetgroup/tg-9c0651f6/eeb5db9d6f0cb43e",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::TargetGroup",
+            "Timestamp": "2026-02-10T23:38:43.878432+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "8d5dff05-ce92-4782-9085-e40084a02417",
+            "StackName": "patient-management",
+            "LogicalResourceId": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::TargetGroup",
+            "Timestamp": "2026-02-10T23:38:43.694956+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "08f865af-ef18-4a75-b775-c9cbe6feb0e5",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcF1F9209A",
+            "PhysicalResourceId": "vpc-b48fc6f2245b5cd29",
+            "ResourceType": "AWS::EC2::VPC",
+            "Timestamp": "2026-02-10T23:38:43.694917+00:00",
+            "ResourceStatus": "CREATE_COMPLETE"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "afd3bbc0-81f8-4ce6-911a-5bb1f9b4b62e",
+            "StackName": "patient-management",
+            "LogicalResourceId": "PatientManagementVpcF1F9209A",
+            "ResourceType": "AWS::EC2::VPC",
+            "Timestamp": "2026-02-10T23:38:43.351690+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "3a2aea0b-6f59-4526-b207-882e89e915e7",
+            "StackName": "patient-management",
+            "LogicalResourceId": "patient-management",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2026-02-10T23:38:43.351006+00:00",
+            "ResourceStatus": "CREATE_IN_PROGRESS"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "EventId": "f9ecd433-49da-4851-aa79-e747fe6fd3e8",
+            "StackName": "patient-management",
+            "LogicalResourceId": "patient-management",
+            "PhysicalResourceId": "arn:aws:cloudformation:us-east-1:000000000000:stack/patient-management/a7791233-4eba-4613-ba23-6a8bfd5b3c25",
+            "ResourceType": "AWS::CloudFormation::Stack",
+            "Timestamp": "2026-02-10T23:38:43.320215+00:00",
+            "ResourceStatus": "REVIEW_IN_PROGRESS",
+            "ResourceStatusReason": "User Initiated"
+        }
+    ]
+}
